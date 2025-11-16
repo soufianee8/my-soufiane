@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>سفيان VPN VIP</title>
+    <style>
+        body { font-family: 'Cairo', Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; direction: rtl; }
+        .container { max-width: 440px; margin: 60px auto 100px auto; background: #fff; border-radius: 15px; box-shadow: 0 5px 32px #0001; padding: 35px 22px 45px 22px;}
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 18px 0;
+            margin: 14px 0;
+            background: #006aca;
+            color: #fff;
+            font-size: 1.3em;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-align: center;
+            text-decoration: none;
+        }
+        .btn:hover { background: #006acae8; }
+        .page { display: none; }
+        .page.active { display: block; }
+        .contact-link { color: #007700; font-weight: bold; font-size: 1em; text-decoration: underline; margin-top: 10px; display: block;}
+        .contact-link.email { color: #b06109;}
+        .contact-link.telegram,
+        .contact-link.channel { color: #006aca;}
+        /* خطوط التوهج لجملة vip */
+        .glow-text {
+            color: #fff;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            margin-top: 50px;
+            letter-spacing: 2px;
+            text-shadow:
+                0 0 12px #0099ff,
+                0 0 22px #00ffcc,
+                0 0 36px #0099ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- الصفحة الرئيسية -->
+        <div id="home" class="page active">
+            <button class="btn" onclick="showPage('sofiane')">من هو سفيان</button>
+            <button class="btn" onclick="showPage('httpcustom')">ما هو HTTP CUSTOM</button>
+            <button class="btn" onclick="showPage('contact')">تواصل معنا</button>
+        </div>
+
+        <!-- صفحة سفيان -->
+        <div id="sofiane" class="page">
+            <h2>تعريف سفيان</h2>
+            <p>
+                سفيان هو مطور في عالم VPN، مطور موثوق منذ سنة 2020.<br>
+                عمل على برمجة VPS وبيعها، وعمل كذلك على نشر الأنترنت المجاني للناس.
+            </p>
+            <button class="btn" onclick="showPage('home')">رجوع</button>
+        </div>
+
+        <!-- صفحة HTTP CUSTOM -->
+        <div id="httpcustom" class="page">
+            <h2>ما هو HTTP CUSTOM؟</h2>
+            <p>
+                التطبيق عبارة عن مدير اتصال لخدمات VPN فقط.<br>
+                يعمل على العديد من البروتوكولات وهو تطبيق آمن وقانوني في بعض الدول.
+            </p>
+            <button class="btn" onclick="showPage('home')">رجوع</button>
+        </div>
+
+        <!-- صفحة التواصل -->
+        <div id="contact" class="page">
+            <h2>تواصل معنا</h2>
+            <a class="contact-link" href="https://wa.me/212609177622" target="_blank">تواصل معي عبر واتساب</a>
+            <a class="contact-link email" href="mailto:soufianeelmattichi1@gmail.com">تواصل معي عبر البريد الإلكتروني</a>
+            <a class="contact-link telegram" href="https://t.me/SOUFIANETECH11" target="_blank">تواصل معي عبر تلجرام</a>
+            <a class="contact-link channel" href="https://t.me/SOUFIANEVPS1" target="_blank">قناتي على تلجرام</a>
+            <button class="btn" onclick="showPage('home')">رجوع</button>
+        </div>
+
+    </div>
+    <div class="glow-text">BY SOUFIANEVIP</div>
+    <script>
+        function showPage(id) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
